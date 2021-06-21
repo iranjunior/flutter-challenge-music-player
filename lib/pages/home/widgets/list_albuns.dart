@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:music_player_app/constantes/colors.dart';
+import 'package:music_player_app/models/album.dart';
 
 class ListAlbunsHomePage extends StatefulWidget {
   ListAlbunsHomePage({Key? key, required this.albuns}) : super(key: key);
-  final List<Map<String, dynamic>> albuns;
+  final List<Album> albuns;
   @override
   _ListAlbunsHomePageState createState() => _ListAlbunsHomePageState();
 }
@@ -26,7 +27,7 @@ class _ListAlbunsHomePageState extends State<ListAlbunsHomePage> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24),
               image: DecorationImage(
-                image: AssetImage(widget.albuns[index]['cover']),
+                image: AssetImage(widget.albuns[index].cover),
                 fit: BoxFit.cover,
               ),
               boxShadow: [

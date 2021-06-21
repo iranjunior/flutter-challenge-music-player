@@ -1,6 +1,7 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:music_player_app/constantes/colors.dart';
+import 'package:music_player_app/models/music.dart';
 
 class BottomAppMusicPlayer extends StatelessWidget {
   const BottomAppMusicPlayer({
@@ -8,7 +9,7 @@ class BottomAppMusicPlayer extends StatelessWidget {
     required this.music
   }) : super(key: key);
 
-  final Map<String, dynamic> music;
+  final Music music;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class BottomAppMusicPlayer extends StatelessWidget {
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(8)),
                             image: DecorationImage(
-                              image: AssetImage(music['cover']),
+                              image: AssetImage(music.image),
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -54,11 +55,11 @@ class BottomAppMusicPlayer extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                music['title'],
+                                music.title,
                                 style: Theme.of(context).textTheme.subtitle1,
                               ),
                               Text(
-                                music['artist'],
+                                music.artist,
                                 style: Theme.of(context).textTheme.subtitle2,
                               ),
                             ],

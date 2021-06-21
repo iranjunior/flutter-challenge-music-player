@@ -1,33 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:music_player_app/constantes/colors.dart';
+import 'package:music_player_app/models/album.dart';
+import 'package:music_player_app/models/music.dart';
 import 'package:music_player_app/pages/home/widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  static const albuns = [
-    {'title': 'The Beatles', 'cover': 'assets/the-beatles.jpeg'},
-    {'title': 'Pink Floyd', 'cover': 'assets/pink-floyd.jpeg'},
-    {'title': 'Van Halen', 'cover': 'assets/van-halen.jpeg'},
-    {'title': 'Warner', 'cover': 'assets/warner.jpeg'},
+  final albuns = [
+    Album.fromMap({'title': 'The Beatles', 'cover': 'assets/the-beatles.jpeg'}),
+    Album.fromMap({'title': 'Pink Floyd', 'cover': 'assets/pink-floyd.jpeg'}),
+    Album.fromMap({'title': 'Van Halen', 'cover': 'assets/van-halen.jpeg'}),
+    Album.fromMap({'title': 'Warner', 'cover': 'assets/warner.jpeg'}),
   ];
-  static const musics = [
-    {
+  final musics = [
+    Music.fromMap({
       'artist': 'The Moviment',
       'title': 'See you again',
-      'cover': 'assets/band.jpg'
-    },
-    {
+      'image': 'assets/band.jpg'
+    }),
+    Music.fromMap({
       'artist': 'Rubens Mancio',
-      ' title': 'Te quiero',
-      'cover': 'assets/singer.jpg'
-    },
+      'title': 'Te quiero',
+      'image': 'assets/singer.jpg'
+    }),
   ];
 
   @override

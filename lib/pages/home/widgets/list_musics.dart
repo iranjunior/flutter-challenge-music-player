@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:music_player_app/constantes/colors.dart';
+import 'package:music_player_app/models/music.dart';
 import 'package:music_player_app/pages/pages.dart';
 
 class ListMusicsHomePage extends StatefulWidget {
   ListMusicsHomePage({Key? key, required this.musics}) : super(key: key);
-  final List<Map<String, dynamic>> musics;
+  final List<Music> musics;
 
   @override
   _ListMusicsHomePageState createState() => _ListMusicsHomePageState();
@@ -26,7 +27,9 @@ class _ListMusicsHomePageState extends State<ListMusicsHomePage> {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => PlayerPage(),
+                builder: (_) => PlayerPage(
+                  music: widget.musics[index],
+                ),
               ),
             ),
             child: AspectRatio(
@@ -36,7 +39,7 @@ class _ListMusicsHomePageState extends State<ListMusicsHomePage> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
                   image: DecorationImage(
-                    image: AssetImage(widget.musics[index]['cover']),
+                    image: AssetImage(widget.musics[index].image),
                     fit: BoxFit.cover,
                   ),
                   boxShadow: [
