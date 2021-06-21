@@ -36,26 +36,20 @@ class _HomePageState extends State<HomePage> {
       children: [
         BackgroundHomePage(),
         Scaffold(
-          appBar: AppBarHomePage(),
           backgroundColor: Colors.transparent,
+          appBar: AppBarHomePage(),
           body: ContainerBody(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TitleHomePage(),
-                  SearchField(),
-                  ListAlbunsHomePage(
-                    albuns: albuns,
-                  ),
-                  ListMusicsHomePage(
-                    musics: musics,
-                  ),
-                ],
-              ),
+            child: Content(
+              children: [
+                TitleHomePage(),
+                SearchField(),
+                ListAlbunsHomePage(
+                  albuns: albuns,
+                ),
+                ListMusicsHomePage(
+                  musics: musics,
+                ),
+              ],
             ),
           ),
           bottomNavigationBar: BottomAppMusicPlayer(
