@@ -2,7 +2,13 @@
 
 link para design de exemplo: [Dribbble - Music Player](https://dribbble.com/shots/15724059-Music-Player-App/attachments/7525881?mode=media)
 
-<img src="docs/image.png" alt="navegacao entre as páginas" height="500">
+<img src="docs/navigation.gif" alt="navegacao entre as páginas" height="500">
+
+
+| Tela inicial  | Segunda Tela  | 
+|---|---|
+|      <img src="docs/image1.png" alt="imagem da tela final" height="400"> |      <img src="docs/image2.png" alt="imagem da segunda tela" height="400"> |  
+
 
 ### Descrição
 

@@ -10,7 +10,6 @@ class BackgroundPlayerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(60)),
       gradient: LinearGradient(
         colors: [
           Color(kBackgroundGradientColor1),
