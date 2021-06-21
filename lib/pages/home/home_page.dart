@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:music_player_app/constantes/colors.dart';
 import 'package:music_player_app/models/album.dart';
 import 'package:music_player_app/models/music.dart';
 import 'package:music_player_app/pages/home/widgets/widgets.dart';
@@ -39,18 +38,7 @@ class _HomePageState extends State<HomePage> {
         Scaffold(
           appBar: AppBarHomePage(),
           backgroundColor: Colors.transparent,
-          body: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(60)),
-              gradient: LinearGradient(
-                colors: [
-                  Color(kBackgroundGradientColor1),
-                  Color(kBackgroundGradientColor2)
-                ],
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-              ),
-            ),
+          body: ContainerBody(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Column(
