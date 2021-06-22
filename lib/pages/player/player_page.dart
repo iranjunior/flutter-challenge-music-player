@@ -19,45 +19,39 @@ class _PlayerPageState extends State<PlayerPage> {
         Scaffold(
           appBar: AppBarPlayerPage(),
           backgroundColor: Colors.transparent,
-          body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Flexible(
-                  flex: 7,
-                  child: PlayerIndicatorProgress(
-                    imageUrl: widget.music.image,
-                  ),
+          body: Content(
+            children: [
+              Flexible(
+                flex: 7,
+                child: PlayerIndicatorProgress(
+                  imageUrl: widget.music.image,
                 ),
-                Spacer(),
-                Flexible(
-                  flex: 1,
-                  child: PlayerOptions(
-                    music: widget.music,
-                  ),
+              ),
+              Spacer(),
+              Flexible(
+                flex: 1,
+                child: PlayerOptions(
+                  music: widget.music,
                 ),
-                Spacer(),
-                Flexible(
-                  flex: 2,
-                  child: PlayerWave(),
-                ),
-                Spacer(),
-                Flexible(
-                  flex: 2,
-                  child: PlayerCommand(),
-                ),
-                Spacer(
-                  flex: 2,
-                ),
-                Flexible(
-                  flex: 2,
-                  child: PlayerListOptions(),
-                ),
-              ],
-            ),
+              ),
+              Spacer(),
+              Flexible(
+                flex: 2,
+                child: PlayerWave(),
+              ),
+              Spacer(),
+              Flexible(
+                flex: 2,
+                child: PlayerCommand(),
+              ),
+              Spacer(
+                flex: 2,
+              ),
+              Flexible(
+                flex: 2,
+                child: PlayerListOptions(),
+              ),
+            ],
           ),
         )
       ],
